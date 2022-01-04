@@ -1,0 +1,10 @@
+>mongoimport --jsonArray --db call --collection call_data --file path of the Json file
+>use call
+>show collections
+>db,call_data.find().pretty()
+>db.call_data.find().count()
+>db.call_data.insert({"source" : "+918971153465", "destination" : "+916362760431", "source_location": "Hassan",
+                         "destination_location": "Mumbai", "call_duration": 20.9, "roaming": "false", "call_charge":2.03 })
+>db.call_data.find().count()
+>db.call_data.find({roaming:"true"}).count()
+>db.call_data.find({$and:[{roaming:"true"},{call_duartion:{$gt:10}}]}).pretty()
